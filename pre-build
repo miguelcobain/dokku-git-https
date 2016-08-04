@@ -7,7 +7,7 @@ verify_app_name "$APP"
 
 dokku_log_info1 "Configuring git url rewrite to https..."
 
-CMD="git config --global url.\"https://\".insteadOf git://"
+CMD="git config --system url.\"https://\".insteadOf git://"
 
 ID=$(docker run $DOKKU_GLOBAL_RUN_ARGS -i -a stdin $IMAGE /bin/bash -c "$CMD")
 test $(docker wait $ID) -eq 0
