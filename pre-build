@@ -5,7 +5,7 @@ source "$PLUGIN_CORE_AVAILABLE_PATH/common/functions"
 APP="$1"; IMAGE_TAG="$2"; IMAGE=$(get_app_image_name $APP $IMAGE_TAG)
 verify_app_name "$APP"
 
-dokku_log_info1" Configuring git url rewrite to https..."
+dokku_log_info1 "Configuring git url rewrite to https..."
 
 CMD="git config --global url.\"https://\".insteadOf git://"
 
