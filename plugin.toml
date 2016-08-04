@@ -1,0 +1,4 @@
+[plugin]
+description = "A plugin for Dokku that configures git to use https:// instead of git://"
+version = "0.0.1"
+[plugin.config]
